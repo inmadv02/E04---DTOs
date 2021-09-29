@@ -5,6 +5,7 @@ import com.salesianostriana.dam.E04.modelo.Alumno;
 import com.salesianostriana.dam.E04.repositorio.AlumnoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ public class AlumnoController {
 
     private final AlumnoRepository repository;
 
+    @GetMapping("/")
     public ResponseEntity<List<Alumno>> findAll() {
 
         return ResponseEntity
